@@ -159,3 +159,4 @@
 
 
 (provide-theme 'idea-darkula)
+;;; idea-darkula-theme.el ends here
