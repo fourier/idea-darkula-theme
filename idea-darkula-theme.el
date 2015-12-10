@@ -38,10 +38,6 @@
  'idea-darkula
  '(default ((t (:family "default"
                         :foundry "default"
-                        :width normal
-                        :height 1
-                        :weight normal
-                        :slant normal
                         :underline nil
                         :overline nil
                         :strike-through nil
