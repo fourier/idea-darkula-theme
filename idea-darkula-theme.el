@@ -124,7 +124,24 @@
  ;'(nxml-attribute-prefix ((t (:foreground "#DADADA"))))
  '(nxml-attribute-prefix ((t (:foreground "#BBEDFF"))))
  ; tag prefix : <ui:Checkbox> - here it is "ui"
- '(nxml-element-prefix ((t (:foreground "#EC9852")))))
+ '(nxml-element-prefix ((t (:foreground "#EC9852"))))
+ ;; GNUS customizations
+ '(gnus-group-mail-3-empty ((t )))
+ '(gnus-group-mail-3 ((t (:foreground "#BBEDFF" :weight bold))))
+ '(gnus-group-mail-low-empty  ((t )))
+ '(gnus-group-mail-low  ((t (:foreground "#BBEDFF" :weight bold))))
+ '(gnus-group-news-3-empty  ((t )))
+ '(gnus-group-news-3  ((t (:foreground "#BBEDFF" :weight bold))))
+ ;; GNUS topic face. By default GNUS doesn't support
+ ;; topic faces, see http://www.emacswiki.org/emacs/GnusFormatting#toc6
+ ;; how to add one
+ '(gnus-topic-face ((t (:foreground "#FFC66D" :weight bold :underline t))))
+ '(gnus-topic-empty-face ((t (:foreground "#FFC66D" :underline t))))
+ ;; GNUS summary (list of messages) faces
+ '(gnus-summary-normal-ancient ((t )))
+ '(gnus-summary-normal ((t )))
+ '(gnus-summary-normal-unread ((t (:foreground "#BBEDFF" :weight bold))))
+ )
 
 
  ;; '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
