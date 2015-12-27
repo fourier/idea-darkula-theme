@@ -125,6 +125,10 @@
  '(nxml-attribute-prefix ((t (:foreground "#BBEDFF"))))
  ; tag prefix : <ui:Checkbox> - here it is "ui"
  '(nxml-element-prefix ((t (:foreground "#EC9852"))))
+ ;; ERC customizations
+ '(erc-nick-default-face ((t (:foreground "##9876AA" :bold t))))
+ '(erc-action-face ((t (:foreground "#808080"))))
+ '(erc-button ((t (:foreground "cyan" :underline t))))
  ;; GNUS customizations
  '(gnus-group-mail-3-empty ((t )))
  '(gnus-group-mail-3 ((t (:foreground "#BBEDFF" :weight bold))))
