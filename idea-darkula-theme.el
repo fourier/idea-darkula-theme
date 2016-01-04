@@ -50,16 +50,29 @@
  '(cursor ((t (:background "#bbbbbb"))))
  '(region ((t (:background "#214283"))))
  ;; vertical line when spilt window with C-x 3 on text terminals
- '(vertical-border ((t (:foreground "white"))))
+ '(vertical-border ((t (:foreground "#555555"))))
  ;; same on graphical displays
- '(fringe ((t (:foreground "white"))))
+ '(fringe ((t (:foreground "#555555"))))
+ '(link ((t (:underline (:color foreground-color :style line) :foreground "#287BDE"))))
+ '(link-visited ((t (:underline (:color foreground-color :style line) :foreground "#287BDE" :inherit (link)))))
+ ;; search
+ '(isearch ((t (:background "#214283" :box (:line-width -1 :color "#bbbbbb")))))
+ ;; other search matches
+ '(lazy-highlight ((t (:background "#32593d" :box (:line-width -1 :color "#3c704b")))))
+ ;; tooltip colors doesn't work on OSX
+ '(tooltip ((t (:inherit (variable-pitch) :foreground "#bbbbbb" :background "#5c5c42"))))
+ '(mode-line ((t (:box (:line-width -1 :color "#464646") :weight bold :foreground "#bbbbbb" :background "#3c3f41"))))
+ '(mode-line-inactive ((t (:style released-button :inherit (mode-line) :weight normal))))
+ ;; '(mode-line-highlight ((((class color) (min-colors 88)) (:box (:line-width 2 :color "grey40" :style released-button))) (t (:inherit (highlight)))))
+ ;; IDEA supports something like hl-mode
+ '(hl-line ((t (:background "#323232"))))
  ;; ecb customizations
  '(ecb-default-highlight-face ((t (:background "DarkSlateGray" :box (:line-width 1 :style released-button)))))
  '(ecb-default-general-face ((t (:foreground "white"))))
  ;; coding customizations
  '(font-lock-comment-face ((t (:foreground "#808080"))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#808080"))))
- '(font-lock-doc-face ((t (:foreground "#629755"))))
+ '(font-lock-doc-face ((t (:foreground "#629755" :italic t))))
  '(font-lock-keyword-face ((t (:foreground "#CC7832"))))
  '(font-lock-preprocessor-face ((t (:foreground "green"))))
  '(font-lock-string-face ((t (:foreground "#6A8759"))))
@@ -76,6 +89,8 @@
  '(font-lock-warning-face ((t (:foreground "red"))))
  '(font-lock-operator-face ((t (:foreground "#CC7832"))))
  '(font-lock-end-statement ((t (:foreground "white"))))
+ ;; Java-like annotations 
+ '(c-annotation-face ((t (:foreground "#BBB529"))))
  ;; log4j customizations
  '(log4j-font-lock-warn-face ((t (:foreground "Orange"))))
  ;; info-mode customization
@@ -145,27 +160,27 @@
  '(gnus-summary-normal-ancient ((t )))
  '(gnus-summary-normal ((t )))
  '(gnus-summary-normal-unread ((t (:foreground "#BBEDFF" :weight bold))))
+
+ ;; Company-mode faces based on IntelliJ IDEA colors
+ '(company-tooltip ((t (:foreground "#bbbbbb" :background "#3c3f41"))))
+ '(company-tooltip-selection ((t (:background "#0052a4"))))
+
+ '(company-tooltip-search ((t (:inherit isearch))))
+ '(company-tooltip-mouse ((t (:background "#4a4e4f"))))
+ '(company-tooltip-common ((t (:foreground "#d17ad6"))))
+ '(company-tooltip-annotation ((t (:inherit company-tooltip-common))))
+ '(company-scrollbar-fg ((t (:background "#5b5d5e"))))
+ '(company-scrollbar-bg ((t (:background "#3b3f40"))))
+ ;;'(company-preview ((t (:background "blue4" :foreground "wheat"))))
+ '(company-preview ((t (:inherit region))))
+ '(company-preview-common ((t (:inherit company-preview :foreground "#d17ad6"))))
+ '(company-preview-search ((t (:inherit isearch))))
  )
 
 
  ;; '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
  ;; '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
- ;; '(link ((t (:underline (:color foreground-color :style line) :foreground "#8ac6f2"))))
- ;; '(link-visited ((t (:underline (:color foreground-color :style line) :foreground "#e5786d" :inherit (link)))))
- ;; '(fringe ((t (:background "#303030"))))
  ;; '(header-line ((t (:underline (:color foreground-color :style line) :inverse-video nil :foreground "#e7f6da" :background "#303030" :inherit (mode-line)))))
- ;; '(tooltip ((((class color)) (:inherit (variable-pitch) :foreground "black" :background "lightyellow")) (t (:inherit (variable-pitch)))))
- ;; '(mode-line ((t (:box (:line-width -1 :color nil :style released-button) :foreground "#f6f3e8" :background "#444444"))))
- ;; '(mode-line-buffer-id ((t (:weight bold))))
- ;; '(mode-line-emphasis ((t (:weight bold))))
- ;; '(mode-line-highlight ((((class color) (min-colors 88)) (:box (:line-width 2 :color "grey40" :style released-button))) (t (:inherit (highlight)))))
- ;; '(mode-line-inactive ((t (:weight light :box (:line-width -1 :color "grey40" :style nil) :foreground "#857b6f" :background "#444444" :inherit (mode-line)))))
- ;; '(isearch ((t (:foreground "#857b6f" :background "#343434"))))
- ;; '(isearch-fail ((((class color) (min-colors 88) (background light)) (:background "RosyBrown1")) (((class color) (min-colors 88) (background dark)) (:background "red4")) (((class color) (min-colors 16)) (:background "red")) (((class color) (min-colors 8)) (:background "red")) (((class color grayscale)) (:foreground "grey")) (t (:inverse-video t))))
- ;; '(lazy-highlight ((t (:foreground "#a0a8b0" :background "#384048"))))
- ;; '(match ((((class color) (min-colors 88) (background light)) (:background "yellow1")) (((class color) (min-colors 88) (background dark)) (:background "RoyalBlue3")) (((class color) (min-colors 8) (background light)) (:foreground "black" :background "yellow")) (((class color) (min-colors 8) (background dark)) (:foreground "white" :background "blue")) (((type tty) (class mono)) (:inverse-video t)) (t (:background "gray"))))
- ;; '(next-error ((t (:inherit (region)))))
- ;; '(query-replace ((t (:inherit (isearch))))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path)
