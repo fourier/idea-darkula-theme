@@ -36,17 +36,15 @@
 
 (custom-theme-set-faces
  'idea-darkula
- '(default ((t (:family "default"
-                        :foundry "default"
-                        :underline nil
-                        :overline nil
-                        :strike-through nil
-                        :box nil
-                        :inverse-video nil
-                        :foreground "#A9B7C6"
-                        :background "#2B2B2B"
-                        :stipple nil
-                        :inherit nil))))
+ '(default ((t (:underline nil
+                           :overline nil
+                           :strike-through nil
+                           :box nil
+                           :inverse-video nil
+                           :foreground "#A9B7C6"
+                           :background "#2B2B2B"
+                           :stipple nil
+                           :inherit nil))))
  '(cursor ((t (:background "#bbbbbb"))))
  '(region ((t (:background "#214283"))))
  ;; vertical line when spilt window with C-x 3 on text terminals
