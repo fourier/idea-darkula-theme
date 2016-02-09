@@ -114,7 +114,7 @@
  ;; no attribute set
  '(diredp-no-priv ((t (:foreground "grey" :background "#2B2B2B"))))
  ;; marked file color and mark sign
- '(diredp-flag-mark-line ((t (:background "#2B2B2B"))))
+ '(diredp-flag-mark-line ((t (:background "#2B2B2B" :foreground "gold"))))
  '(diredp-flag-mark ((t (:foreground "gold" :background "#2B2B2B"))))
  '(diredp-inode+size ((t (:foreground "white"))))
  '(diredp-compressed-file-suffix ((t (:foreground "cyan1"))))
