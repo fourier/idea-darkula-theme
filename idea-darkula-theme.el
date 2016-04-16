@@ -173,6 +173,12 @@
  '(company-preview ((t (:inherit region))))
  '(company-preview-common ((t (:inherit company-preview :foreground "#d17ad6"))))
  '(company-preview-search ((t (:inherit isearch))))
+ ;; some custom additions to the Common Lisp code
+ '(lisp-font-lock-annotation-face ((t (:foreground "#BBB529"))))
+ '(slime-repl-inputed-output-face ((t (:inherit 'default))))
+ '(slime-repl-input-face ((t (:inherit 'default :weight bold))))
+ '(slime-repl-output-face ((t (:foreground "cyan1"))))
+ '(slime-repl-prompt-face ((t (:foreground "#007f00"))))
  )
 
 
