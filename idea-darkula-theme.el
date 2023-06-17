@@ -20,7 +20,7 @@
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+ 
 ;;; Commentary:
 
 ;; To use it, put the following in your Emacs configuration file:
@@ -107,6 +107,7 @@
  '(diredp-file-suffix ((t (:foreground "cyan1"))))
  '(diredp-dir-heading ((t (:foreground "white" :background "#2B2B2B" :underline t ))))
  '(diredp-dir-priv ((t (:foreground "#ffffff" :background "#2B2B2B"))))
+ '(diredp-dir-name ((t (:foreground "#ffffff" :background "#2B2B2B"))))
  ;; file attributes in the dired
  '(diredp-read-priv ((t (:foreground "grey" :background "#2B2B2B"))))
  '(diredp-write-priv ((t (:foreground "grey" :background "#2B2B2B"))))
@@ -157,7 +158,15 @@
  ;; GNUS summary (list of messages) faces
  '(gnus-summary-normal-ancient ((t )))
  '(gnus-summary-normal ((t )))
+ ;; unread message face
  '(gnus-summary-normal-unread ((t (:foreground "#BBEDFF" :weight bold))))
+ ;; to use these faces, set them in the config file as
+ ;; (setq gnus-face-1 'darkula-gnus-face-1) etc.
+ ;; they are set here, see below
+ ;; author in the list of messages
+ '(darkula-gnus-face-1 ((t (:foreground "#9876AA" :italic t))) t)
+ ;; message header in the list of messages
+ '(darkula-gnus-face-2 ((t (:foreground "#A5C261"))))
 
  ;; Company-mode faces based on IntelliJ IDEA colors
  '(company-tooltip ((t (:foreground "#bbbbbb" :background "#3c3f41"))))
@@ -173,6 +182,7 @@
  '(company-preview ((t (:inherit region))))
  '(company-preview-common ((t (:inherit company-preview :foreground "#d17ad6"))))
  '(company-preview-search ((t (:inherit isearch))))
+ '(company-template-field ((t (:inherit isearch))))
  ;; some custom additions to the Common Lisp code
  '(lisp-font-lock-annotation-face ((t (:foreground "#BBB529"))))
  '(slime-repl-inputed-output-face ((t (:inherit 'default))))
@@ -185,6 +195,9 @@
  ;; '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
  ;; '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
  ;; '(header-line ((t (:underline (:color foreground-color :style line) :inverse-video nil :foreground "#e7f6da" :background "#303030" :inherit (mode-line)))))
+
+;; (setq gnus-face-1 'darkula-gnus-face-1)
+;; (setq gnus-face-2 'darkula-gnus-face-2)
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path)
